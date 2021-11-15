@@ -1,6 +1,6 @@
 import { Component } from "react";
 import Cart from "../UserCart";
-import UserCart from "../UserList";
+import UsersList from "../UsersList";
 
 const usersBD = [
   { fname: "Arya", id: 1 },
@@ -33,7 +33,7 @@ class UserStore extends Component {
           <Cart users={users} />
         </header>
         <main>
-          <UserCart users={users} setMainUsers={this.setUsersState} />
+          <UsersList users={users} setMainUsers={this.setUsersState} />
         </main>
       </>
     );
