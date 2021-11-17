@@ -15,7 +15,7 @@ class UserStore extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      users: usersBD.map((el) => ({ ...el, isLoad: false })),
+      users: usersBD.map((el) => ({ ...el, isSelected: false })),
     };
   }
 

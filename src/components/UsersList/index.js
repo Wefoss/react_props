@@ -6,17 +6,17 @@ class UsersList extends Component {
     const { users } = this.props;
     const sliceTail = JSON.parse(JSON.stringify(users));
     sliceTail.map((user) =>
-      user.id === id ? (user.isLoad = !user.isLoad) : user.isLoad
+      user.id === id ? (user.isSelected = !user.isSelected) : user.isSelected
     );
     this.props.setMainUsers(sliceTail);
   };
 
-  crealeLists = ({ fname, id, isLoad }) => (
+  crealeLists = ({ fname, id, isSelected }) => (
     <UserItem
       key={id}
       name={fname}
       id={id}
-      isOnLight={isLoad}
+      isOnLight={isSelected}
       onLight={this.swithLight}
     />
   );
