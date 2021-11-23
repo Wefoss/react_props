@@ -36,7 +36,7 @@ class SecondsTimer extends Component {
 
   componentDidUpdate() {
     if(this.timeoutId) {
-      setTimeout(this.tick, 1000);
+      this.timeoutId = setTimeout(this.tick, 1000);
     }
     
   }
